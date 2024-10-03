@@ -1,0 +1,71 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+header, .headerfull, .headertop, .navsearch, .search{
+    display: flex;
+}
+
+.headertop{
+    justify-content: flex-start;
+    align-self: flex-start;
+    width: 100vw
+}
+
+header, .headertop, .navsearch{
+    align-items: center;
+}
+
+.navsearch{
+    flex-direction: column;
+    gap: 30px;
+    min-width: 500px;
+}
+
+.headerfull{
+    background-image: url(../media1/drops.png);
+    background-position: 40% 50%;
+    height: 70vh;
+}
+
+.headerfull, .search input, .search{
+    width: 100%;
+}
+
+.headerfull, body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.logo{
+    width: 300px;
+    height: auto;
+}
+
+body{
+    background-image: url(../media1/background.png);
+}
+
+button{
+    height: 100%;
+    border-radius: 10px;
+}
+
+.input{
+    border-radius: 20px;
+    padding-inline-start: 10px;
+}
+
+.navsearch a{
+    margin: 20px;
+    background: #4C0272;
+    text-decoration: none;
+    color: white;
+    padding-inline: 20px;
+    border-radius: 20px;
+}
+
