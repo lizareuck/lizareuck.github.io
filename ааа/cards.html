@@ -3,13 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cards</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Пасьянс</title>
 </head>
 <style>
     body{
-        font-size: 100px;
+        font-size: 50px;
         background-color: lightslategray;
     }
+
+    img{
+        width: 200px;
+        animation: anim 1s;
+    }
+
+    .back{
+        width: 240px;
+    }
+
+    @keyframes anim{
+        0%{transform: rotate(90deg);}
+        100%{transform: rotate(0);}
+    }
+
 </style>
 <body>
 <!--    <script>
@@ -19,5 +35,17 @@
     document.write('<br>'+ '<img src="cards/card.png">'+'<br>' + cards[i]);
     }
    </script>  -->
+   <div onclick="show()">
+    <img src="cards/card.png" class="back">
+   </div>
+
+   <script>
+    function show(){
+        let card = document.createElement('div');
+        card.innerHTML = '<img src="cards/aceofhearts.png">';
+        document.body.append(card);
+    }
+
+   </script>
 </body> 
 </html>
