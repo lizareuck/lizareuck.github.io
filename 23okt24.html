@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        div{
+            display: flex;
+            flex-direction: column;
+        }
+        #diagram{
+            display: flex;
+            flex-direction: row;
+        }
+        </style>
+        <body>
+            <div id="box"></div>
+            <div id="diagram"></div>
+        </body>
+        <script>
+            
+            let elem = document.getElementById('box')
+            elem.style.width = '50px'
+            elem.style.height = '200px'
+            elem.style.backgroundColor = 'red'
+            document.body.append(elem);
+        
+            let names = ['Москва', 'Рим', 'Париж'];
+            let population = [80000000, 500000, 700000];
+            
+            let diagram = document.getElementById('diagram')
+            let elem2 = document.createElement('div')
+            elem2.innerText = names[0] + '\n' + population[0];
+            diagram.append(elem2);
+        
+            let elem3 = document.createElement('div')
+            elem3.innerText = names[1]+ '\n' + population[1] ;
+            diagram.append(elem3);
+        
+            let elem4 = document.createElement('div')
+            elem4.innerText = names[2]+ '\n' + population[2];
+            diagram.append(elem4);
+        
+        </script>
+</html>
