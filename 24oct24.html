@@ -4,13 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>24 октября 2024</title>
+    <style>
+    body {
+        background-color: AntiqueWhite;
+        background: radial-gradient(Salmon 0%, Tomato 35%, PeachPuff 100%);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 60px;
+        text-align: center;
+    }
+    @keyframes anim{
+        0%{transform: rotate(90deg);}
+        100%{transform: rotate(0);}
+    }
+    .but{
+        text-align: center
+    }
+
+    div{
+        animation: none;
+    }
+    button{
+        animation: anim 2s;
+        background: LightSkyBlue;
+        color: black;
+    }
+    button:focus{
+        background: Navy;
+        color: white;
+    }
+
+    </style>
 </head>
 <body>
+    <div onclick="show()" class="but">
+        <button>Show</button>
+    </div>
     
 </body>
 <script>
+
+  let myDate = new Date();
+    hour = myDate.getHours();
+    min = myDate.getMinutes();
+    sec = myDate.getSeconds();
+    document.write(hour +':'+ min+':'+ sec)
+
     let myDiv = document.createElement('div');
-    myDiv.innerText = 'Допустим мой div';
+    myDiv.innerText = 'Мой div';
     document.body.append(myDiv);
+function show(){
+    for(let i=0; i<100; i++){
+    let button = document.createElement('button');
+    button.innerText = 'Sky'; 
+    document.body.append(button);
+    button.style.cursor = 'pointer';
+    button.style.width = (i+200)+'px';
+    button.style.height = (i+50) +'px';
+    button.style.borderRadius = (i+15)+ 'px';
+    button.style.fontSize = (i+10) +'px';
+    }
+}
+    
+
 </script>
 </html>
