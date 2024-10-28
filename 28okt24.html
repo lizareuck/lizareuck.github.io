@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28 октября 2024</title>
+</head>
+<body>
+</body>
+<script>
+    let furret = document.createElement('img');
+    furret.src = 'furret.gif';
+    document.body.append(furret);
+
+    let left = 100;
+    let step = 1;
+
+    furret.style.position = 'fixed';
+    furret.style.top = '100px';
+    furret.style.left = left + 'px';
+    furret.style.transform = 'rotateY(180deg)';
+
+    function moveFurret(){
+        left = left + step;
+        furret.style.left = left + 'px';
+        if(left > 1000){
+            step = step *(-1);
+            furret.style.transform = 'rotateY(0deg)';
+        }
+        if(left<0){
+            step = step*(-1);
+            furret.style.transform = 'rotateY(180deg)';
+        }
+    }
+    setInterval(moveFurret, 1);
+</script>
+</html>
