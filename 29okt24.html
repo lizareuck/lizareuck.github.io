@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29 октября 2024</title>
+</head>
+<style>
+/*     body{
+        background-image: url(map.jpg);
+    } */
+    #field{
+        width: 1080px;
+        height: 800px;
+        border: solid 1px;
+    }
+</style>
+<body>
+    <div id="field" onclick="createFurret(event)"></div>
+</body>
+<script>
+
+    let field = document.getElementById('field');
+
+    function createFurret(event){
+       /*  console.log(event.clientX + ':' + event.clientY); */
+    let furret = document.createElement('img');
+    furret.src = 'furret.gif';
+    document.body.append(furret);
+
+/*     let berry = document.createElement('img');
+    berry.src = 'Berry.png';
+    document.body.append(berry);
+    berry.style.position = 'fixed';
+    berry.style.left = '1500px'
+    berry.style.width = '500px'; */
+
+    let left = 100;
+    let step = 1;
+
+    furret.style.position = 'fixed';
+    furret.style.top = '100px';
+    furret.style.left = left + 'px';
+    furret.style.transform = 'rotateY(180deg)';
+
+    function moveFurret(){
+        left = left + step;
+        furret.style.left = left + 'px';
+        if(left > 1000){
+            step = step *(-1);
+            furret.style.transform = 'rotateY(0deg)';
+        }
+        if(left<0){
+            step = step*(-1);
+            furret.style.transform = 'rotateY(180deg)';
+        }
+    }
+    setInterval(moveFurret, 1);
+    }
+</script>
+</html>
