@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>30 октября 2024</title>
+</head>
+<body>
+</body>
+<script>
+    let cityNames= ['Щелково', 'Нью-Йорк','Токио','Рио-де-Жанейро','Дубай']
+    let cost = ['500','750','920','650','1100']
+    let photo = ['Щёлково.png','НьюЙорк.png','Токио.png','РиоДеЖанейро.png','Дубаи.png']
+  
+    let diagram = document.createElement('div');
+    diagram.style.display = 'flex';
+    diagram.style.color = 'white';
+    diagram.style.alignItems = 'flex-end';
+    document.body.append(diagram);
+
+    for(let i=0; i<5; i++){
+        let city = document.createElement('div');
+        city.style.width = '100px';
+        city.style.height = cost[i] + 'px';
+        city.style.backgroundImage = 'url(' + photo[i] +')';
+        city.style.margin = '10px';
+        city.innerHTML = cityNames[i] + '<br>' + cost[i];
+        diagram.append(city);
+    }
+</script>
+</html>
