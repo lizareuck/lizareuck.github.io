@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31 октября 2024</title>
+</head>
+<style>
+    button{
+        height: 60px;
+        width: 70px;
+        border-radius: 10%;
+        font-size: large;
+        background: darkred;
+        color: white;
+        border: 3px solid gold;
+    }
+</style>
+<body>
+    <img src="rul.png" id="rul">
+    <button onclick="stopRul()">Stop</button>
+    <button onclick="startRul()">Start</button>
+</body>
+<script>
+    let rul = document.getElementById('rul')
+    let angle = 0
+
+    function rotateRul(){
+        angle+=2
+        rul.style.transform = 'rotate(' + angle + 'deg)'
+    }
+
+    let timer
+
+    function startRul(){
+        timer = setInterval(rotateRul, 1)
+    }
+
+    function stopRul(){
+        clearInterval(timer)
+    }
+</script>
+</html>
