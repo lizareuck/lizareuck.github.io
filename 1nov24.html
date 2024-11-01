@@ -33,6 +33,7 @@
     <button onclick="f2()">Сделать буквы заглавными</button>
     <button onclick="f3()">Перевернуть слово</button>
     <button onclick="f4()">Найти букву в тексте</button>
+    <button onclick="f5()">Unicode</button>
 </body>
 <script>
     let myText = document.getElementById('myText');
@@ -61,7 +62,12 @@
     function f4(){
         let string = myText.value;
         let lett = letter.value;
-        result.innerText = string.search('"'+lett+'"');
+        result.innerText = string.search(lett);
+    }
+        function f5(){
+        let string = myText.value;
+        result.innerText = String.fromCharCode(string);
+
     }
 </script>
 </html>
