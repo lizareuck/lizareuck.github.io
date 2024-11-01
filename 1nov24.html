@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 ноября 2024</title>
+</head>
+<style>
+    input{
+        height: 50px;
+        width: 200px;
+    }
+    button{
+        margin: 5px;
+        height: 30px;
+        background: LightSkyBlue;
+    }
+    button:hover{
+        background: Navy;
+        color: Azure;
+    }
+    #result{
+        height: 40px;
+        font-size: large;
+        color: navy;
+    }
+</style>
+<body>
+    <input type="text" id="myText" placeholder="Текст">
+    <input type="text" id="letter" placeholder="Буква">
+    <div id="result"></div>
+    <button onclick="f1()">Длина строки</button>
+    <button onclick="f2()">Сделать буквы заглавными</button>
+    <button onclick="f3()">Перевернуть слово</button>
+    <button onclick="f4()">Найти букву в тексте</button>
+</body>
+<script>
+    let myText = document.getElementById('myText');
+    let result = document.getElementById('result');
+    let letter = document.getElementById('letter')
+    console.log(myText);
+    console.log(letter);
+
+    function f1(){
+        let string = myText.value;
+        result.innerText = string.length;
+    }
+
+    function f2(){
+        let string = myText.value;
+        result.innerText = string.toUpperCase();
+    }
+
+    function f3(){
+        let string = myText.value;
+        let strToArr = string.split('');
+        strToArr.reverse();
+        result.innerText = strToArr;
+    }
+
+    function f4(){
+        let string = myText.value;
+        let lett = letter.value;
+        result.innerText = string.search('"'+lett+'"');
+    }
+</script>
+</html>
