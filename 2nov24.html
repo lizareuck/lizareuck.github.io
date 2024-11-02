@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 ноября 2024</title>
+</head>
+<style>
+    input{
+        height: 50px;
+        width: 200px;
+    }
+    button{
+        margin: 5px;
+        height: 30px;
+        background: LightSkyBlue;
+    }
+    button:hover{
+        background: Navy;
+        color: Azure;
+    }
+    #result{
+        height: 40px;
+        font-size: large;
+        color: navy;
+    }
+</style>
+<body>
+    <input type="text" id="myText" placeholder="Текст">
+    <button onclick="f1()">Вывести мой текст</button>
+    <div id="result"></div>
+</body>
+<script>
+    function f1(){
+        let string = myText.value;
+        result.innerText = string;
+    }
+</script>
+</html>
