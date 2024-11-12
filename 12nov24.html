@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 ноября 2024</title>
+</head>
+<body>
+    <input type="text" id="t0" placeholder="введите исходный текст">
+    <input type="text" id="key" placeholder="ключ">
+    <button onclick="encrypt()">Зашифровать</button>
+    <div id="uniCode"></div>
+    <br>
+    <div id="encrypted"></div>
+</body>
+<script>
+    let text0 = document.getElementById('t0');
+    let key = document.getElementById('key');
+    let uniCode = document.getElementById('uniCode');
+    let encr = document.getElementById('encrypted');
+
+    function encrypt(){
+        let t = text0.value;
+        let len = t.length;
+
+        for (let i=0; i < len; i++){
+            let code = t.charCodeAt(i);
+
+            uniCode.innerText += code + '.';
+            encr.innerText += String.fromCharCode(code + parseInt(key.value));
+        }
+    }
+</script>
+</html>
